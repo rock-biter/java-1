@@ -1,0 +1,25 @@
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.page-header {
+	background-color: #ececec;
+	text-align: center;
+	padding: 20px;
+	border-bottom: 2px solid sandybrown;
+}
+
+.page-header img {
+	width: 200px;
+}
+
+.section__title {
+	font-size: 28px;
+	color: sandybrown;
+}
+
+.list__item .item__title {
+	font-weight: 700;
+	font-style: italic;
+}
