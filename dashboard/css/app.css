@@ -1,0 +1,69 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul,
+ol,
+menu {
+	list-style: none;
+}
+
+body {
+	background-color: #f1f1f1;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.page-header {
+	background-color: white;
+	padding: 20px;
+}
+
+.profile {
+	width: 50px;
+	margin-right: 10px;
+}
+
+.page-header > * {
+	vertical-align: middle;
+}
+
+.content {
+	padding: 60px 0;
+}
+
+.card {
+	background-color: white;
+	padding: 24px;
+	border-radius: 10px;
+}
+
+.playlist-item {
+	margin-top: 12px;
+}
+
+.playlist-item > * {
+	vertical-align: middle;
+}
+
+.playlist-item p {
+	display: inline;
+}
+
+.playlist-item span {
+	display: inline-block;
+	width: 30px;
+	/* height: 30px; */
+	color: white;
+	background-color: cornflowerblue;
+	font-size: 16px;
+	border-radius: 50%;
+	margin-right: 10px;
+	text-align: center;
+	line-height: 30px;
+}
