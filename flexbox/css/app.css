@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.section {
+	padding: 50px 20px;
+}
+
+.row {
+	background-color: salmon;
+	border-radius: 8px;
+	padding: 20px;
+	display: flex;
+}
+
+.row > * {
+	background-color: cornflowerblue;
+	color: white;
+	border-radius: 8px;
+	padding: 20px;
+}
+
+/* EX 2 */
+#ex-2 .row {
+	flex-direction: column;
+}
+
+/* EX 3 */
+#ex-3 .row {
+	flex-wrap: wrap;
+}
+
+/* ex 4 */
+#ex-4 .row {
+	justify-content: space-evenly;
+}
+
+#ex-4 .row > * {
+	width: calc(100% / 3);
+}
+
+/* EX 5 */
+#ex-5 .row {
+	align-items: center;
+}
+
+#ex-5 .logo {
+	height: 150px;
+}
+
+.grow-1 {
+	flex-grow: 1;
+}
+
+.grow-3 {
+	flex-grow: 3;
+}
+
+.order--1 {
+	order: -1;
+}
+
+.order-1 {
+	order: 1;
+}
+
+.order-3 {
+	order: 3;
+}
+
+#ex-7 .row > :last-child {
+	background-color: chartreuse;
+}
+
+.self-end {
+	align-self: flex-end;
+}
