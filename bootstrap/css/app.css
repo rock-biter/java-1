@@ -1,0 +1,19 @@
+.row > * {
+	/* border: 1px solid black; */
+}
+
+.bg-mycolor {
+	background: slateblue;
+}
+
+.ms_badge {
+	/* i vostri stili */
+}
+
+/* .row > * {
+        padding: 0;
+      }
+
+      .row {
+        justify-content: center;
+      } */
