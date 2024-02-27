@@ -1,0 +1,4 @@
+/* my style */
+.debug .row > * {
+	border: 2px solid cornflowerblue;
+}
