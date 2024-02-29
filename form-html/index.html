@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form HTML</title>
+
+		<link rel="stylesheet" href="./css/app.css" />
+	</head>
+	<body>
+		<h1>Ciao Form</h1>
+
+		<form action="" method="GET">
+			<label for="name">Nome</label>
+			<input
+				name="name"
+				id="name"
+				value="Gianluca"
+				type="text"
+				placeholder="Nome"
+				readonly
+			/>
+			<input
+				name="age"
+				type="number"
+				placeholder="Eta"
+				min="0"
+				max="100"
+				required
+			/>
+			<input name="color" type="color" />
+			<input type="checkbox" />
+			<input type="radio" />
+			<input type="date" />
+			<input type="file" />
+			<input type="month" />
+			<input type="password" />
+			<input type="range" />
+			<input type="time" />
+			<textarea
+				name="message"
+				placeholder="Il tuo messagio"
+				cols="30"
+				rows="10"
+			></textarea>
+			<select name="city">
+				<option value="">Seleziona uno sconto</option>
+				<option value="20">Sconto 20%</option>
+				<option value="50">Sconto 50%</option>
+				<option value="100">Sconto 100%</option>
+				<option>Roma</option>
+			</select>
+			<input type="submit" value="Clicca qui" />
+			<button>Clicca qui</button>
+		</form>
+	</body>
+</html>
