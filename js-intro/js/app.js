@@ -44,3 +44,13 @@ console.log('Ciao dal file app.js')
 const randomFloat = Math.random()
 console.log(randomFloat)
 // console.log(Math.PI)
+
+// CALCOLARE SCONTO
+const prezzo = 125.36 // number
+
+// const sconto20 = prezzo * 20 / 100 // 0.2
+const sconto20 = prezzo * 0.2 // 0.2
+
+// 0% -> 0 = 0 / 100
+// 50% -> 0.5 = 50 /100
+// 100% -> 1 = 100 / 100
