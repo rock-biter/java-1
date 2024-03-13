@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: midnightblue;
+}
+
+.grid-wrapper {
+	padding: 50px;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.grid {
+	/* display: grid;
+	grid-template-columns: repeat(8, 1fr); */
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cell {
+	aspect-ratio: 1 / 1;
+	border: 2px solid white;
+	/* padding: 20px; */
+	width: calc(100% / 8);
+	display: flex;
+	color: white;
+	justify-content: center;
+	align-items: center;
+}
+
+.cell.bg-dark {
+	background-color: black;
+}
