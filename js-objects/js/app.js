@@ -152,7 +152,7 @@ const leAltre = []
 for (let i = 0; i < cars.length; i++) {
 	const car = cars[i]
 
-	console.log(car)
+	// console.log(car)
 
 	if (car.alimentazione === 'Benzina') {
 		benzina.push(car)
@@ -163,9 +163,9 @@ for (let i = 0; i < cars.length; i++) {
 	}
 }
 
-console.log(benzina)
-console.log(diesel)
-console.log(leAltre)
+// console.log(benzina)
+// console.log(diesel)
+// console.log(leAltre)
 
 /**
  * SNACK 2
@@ -173,29 +173,182 @@ console.log(leAltre)
 
 Es: [‘pippo’, ‘PLUTO’, ‘Paperino’] => [‘Pippo’, ‘Pluto’, ‘Paperino’]
 
-p
-ippo
-
-P + ippo
-
-P
-LUTO
-
-P + luto
+pippo => pippo => P + ippo
+PLUTO => pluto => P + luto
+Paperino => paperino => P + aperino
 
  */
 
-const strings = ['pippo', 'PLUTO', 'Paperino']
+const strings = ['pippo', 'PLUTO', 'MINNIE', 'TOPolina', 'Paperino']
 const nuoveStringhe = []
 
 for (let i = 0; i < strings.length; i++) {
 	const stringa = strings[i]
-	const stringMinuscola = stringa.toLowerCase()
-	console.log(stringa, stringMinuscola)
 
+	const formatted = capitalize(stringa)
+	// console.log(formattedString, stringa)
 	// rimettere la prima lettere maiuscola
 
-	nuoveStringhe.push(stringMinuscola)
+	nuoveStringhe.push(formatted)
 }
 
 console.log(nuoveStringhe)
+
+// const string = capitalize('PAPÀ')
+// console.log(string)
+
+/**
+ * SNACK 3
+ * Crea un array di oggetti che rappresentano degli animali.
+Ogni animale ha un nome, una famiglia e una classe.
+Crea un nuovo array con la lista dei mammiferi.
+ */
+
+// const animal = {
+// 	nome: 'leone',
+// 	famiglia: 'felidi',
+// 	classe: 'mammiferi'
+// }
+
+const animals = [
+	{
+		nome: 'leone',
+		famiglia: 'felidi',
+		classe: 'mammiferi',
+	},
+	{
+		nome: 'gatto',
+		famiglia: 'felidi',
+		classe: 'mammiferi',
+	},
+	{
+		nome: 'cane',
+		famiglia: 'canidi',
+		classe: 'mammiferi',
+	},
+	{
+		nome: 'gallina',
+		famiglia: 'fasianidi',
+		classe: 'uccello',
+	},
+	{
+		nome: 'volpe',
+		famiglia: 'canidi',
+		classe: 'mammiferi',
+	},
+	{
+		nome: 'fagiano',
+		famiglia: 'fasianidi',
+		classe: 'uccello',
+	},
+	{
+		nome: 'tigre',
+		famiglia: 'felidi',
+		classe: 'mammiferi',
+	},
+]
+
+// console.log(animals)
+
+const mammals = []
+const canidi = []
+
+for (let i = 0; i < animals.length; i++) {
+	const currentAnimal = animals[i]
+	// console.log(i, currentAnimal.nome, currentAnimal.classe)
+
+	if (currentAnimal.classe === 'mammiferi') {
+		mammals.push(currentAnimal)
+	}
+
+	if (currentAnimal.famiglia === 'canidi') {
+		canidi.push(currentAnimal)
+	}
+}
+
+// console.log(mammals, canidi)
+
+/**
+ * SNACK 4
+ * 
+ * Crea un array di oggetti che rappresentano delle persone.
+Ogni persona ha un nome, un cognome e un’età.
+Crea quindi un nuovo array inserendo, per ogni persona, una frase con il
+nome e cognome e l’indicazione se può guidare, in base all’età.
+ */
+
+const people = [
+	{
+		nome: 'Mario',
+		cognome: 'Rossi',
+		eta: 23,
+	},
+	{
+		nome: 'Mimmo',
+		cognome: 'Pesci',
+		eta: 54,
+	},
+	{
+		nome: 'Sara',
+		cognome: 'Verdi',
+		eta: 15,
+	},
+	{
+		nome: 'Pasquale',
+		cognome: 'Calenda',
+		eta: 85,
+	},
+	{
+		nome: 'Concetta',
+		cognome: 'Frappi',
+		eta: 25,
+	},
+	{
+		nome: 'Martino',
+		cognome: 'Bianchi',
+		eta: 12,
+	},
+]
+
+// console.log(people)
+const messages = []
+
+for (let i = 0; i < people.length; i++) {
+	const currentPerson = people[i]
+	let mess = getMessage(currentPerson) // string: value of message
+	messages.push(mess)
+}
+
+// const log = console.log(messages)
+// console.log(log)
+
+function getMessage(person) {
+	const nome = person.nome
+	const cognome = person.cognome
+	const eta = person.eta
+
+	let message = nome + ' ' + cognome + ', che ha ' + eta + ' anni'
+	// console.log(nome, cognome, eta)
+
+	if (eta >= 18) {
+		message += ' può guidare.'
+	} else {
+		message += ' non può guidare.'
+	}
+
+	// return message string
+	return message
+}
+
+function capitalize(text) {
+	const stringMinuscola = text.toLowerCase()
+	// console.log(stringa, stringMinuscola)
+	const firstChar = stringMinuscola[0]
+	const restOfString = stringMinuscola.slice(1)
+	// console.log(firstChar, restOfString, stringMinuscola)
+
+	const formattedString = firstChar.toUpperCase() + restOfString
+
+	// return string : parola formattata PIPPO => Pippo
+	return formattedString
+}
