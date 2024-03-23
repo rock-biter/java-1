@@ -1,65 +1,65 @@
 console.log('Oggetti')
 
-let nome = 'Mamma'
-let number = 23
-let numeri = [1, 2, 5, 6, 9, 4, 5]
-let arrayVuoto = [] //array (vuoto)
-let cose = [1, 'ciao', function () {}, true, {}]
-let nomi = ['Maria', 'Gino', 'Giangi']
-let ePari = true
-let parola = undefined
-let cosa = null
-let oggettoVuoto = {} // object (vuoto)
+// let nome = 'Mamma'
+// let number = 23
+// let numeri = [1, 2, 5, 6, 9, 4, 5]
+// let arrayVuoto = [] //array (vuoto)
+// let cose = [1, 'ciao', function () {}, true, {}]
+// let nomi = ['Maria', 'Gino', 'Giangi']
+// let ePari = true
+// let parola = undefined
+// let cosa = null
+// let oggettoVuoto = {} // object (vuoto)
 
-// oggettoVuoto.targa = 'VG125PO'
-// oggettoVuoto.alimentazione = 'diesel'
-// oggettoVuoto.marca = 'Fiat'
+// // oggettoVuoto.targa = 'VG125PO'
+// // oggettoVuoto.alimentazione = 'diesel'
+// // oggettoVuoto.marca = 'Fiat'
 
-// let userName = 'Mario'
-// let userAge = 32
-// let userEmail = 'mario.mariotti@gmail.com'
-// let userState = true
-let mario = {
-	name: 'Mario',
-	age: 32,
-	email: 'mario.mariotti@gmail.com',
-	state: true,
-}
+// // let userName = 'Mario'
+// // let userAge = 32
+// // let userEmail = 'mario.mariotti@gmail.com'
+// // let userState = true
+// let mario = {
+// 	name: 'Mario',
+// 	age: 32,
+// 	email: 'mario.mariotti@gmail.com',
+// 	state: true,
+// }
 
-console.log(mario)
+// console.log(mario)
 
-// let user2Name = 'Mimmo'
-// let user2age = 36
-// let user2Email = 'mimmo@gmail.com'
-// let user2State = false
-let mimmo = {
-	name: 'Mimmo',
-	age: 36,
-	email: 'mimmo@gmail.com',
-	state: false,
-}
+// // let user2Name = 'Mimmo'
+// // let user2age = 36
+// // let user2Email = 'mimmo@gmail.com'
+// // let user2State = false
+// let mimmo = {
+// 	name: 'Mimmo',
+// 	age: 36,
+// 	email: 'mimmo@gmail.com',
+// 	state: false,
+// }
 
-console.log(mimmo)
-// dot notation
-console.log(mimmo.name)
-console.log(mario.email)
+// console.log(mimmo)
+// // dot notation
+// console.log(mimmo.name)
+// console.log(mario.email)
 
-// brackets notation
-console.log(mimmo['name'])
-console.log(mario['email'])
+// // brackets notation
+// console.log(mimmo['name'])
+// console.log(mario['email'])
 
-const elTitle = document.getElementById('title')
+// const elTitle = document.getElementById('title')
 
-console.log(elTitle.innerHTML)
-elTitle.innerHTML = 'Ciao mamma'
+// console.log(elTitle.innerHTML)
+// elTitle.innerHTML = 'Ciao mamma'
 
-mimmo.name = 'Mammo'
+// mimmo.name = 'Mammo'
 
-// 1. la children che nonè presente viene aggiunta
-mimmo.children = [mario]
-// mimmo.children.push(mario)
+// // 1. la children che nonè presente viene aggiunta
+// mimmo.children = [mario]
+// // mimmo.children.push(mario)
 
-console.log(mimmo)
+// console.log(mimmo)
 
 // Snack 1
 /**
@@ -149,9 +149,7 @@ const benzina = []
 const diesel = []
 const leAltre = []
 
-for (let i = 0; i < cars.length; i++) {
-	const car = cars[i]
-
+cars.forEach(function (car) {
 	// console.log(car)
 
 	if (car.alimentazione === 'Benzina') {
@@ -161,11 +159,25 @@ for (let i = 0; i < cars.length; i++) {
 	} else {
 		leAltre.push(car)
 	}
-}
+})
 
-// console.log(benzina)
-// console.log(diesel)
-// console.log(leAltre)
+// for (let i = 0; i < cars.length; i++) {
+// 	const car = cars[i]
+
+// 	// console.log(car)
+
+// 	if (car.alimentazione === 'Benzina') {
+// 		benzina.push(car)
+// 	} else if (car.alimentazione === 'Diesel') {
+// 		diesel.push(car)
+// 	} else {
+// 		leAltre.push(car)
+// 	}
+// }
+
+console.log(benzina)
+console.log(diesel)
+console.log(leAltre)
 
 /**
  * SNACK 2
@@ -180,17 +192,26 @@ Paperino => paperino => P + aperino
  */
 
 const strings = ['pippo', 'PLUTO', 'MINNIE', 'TOPolina', 'Paperino']
+
 const nuoveStringhe = []
 
-for (let i = 0; i < strings.length; i++) {
-	const stringa = strings[i]
-
+strings.forEach(function (stringa) {
 	const formatted = capitalize(stringa)
-	// console.log(formattedString, stringa)
-	// rimettere la prima lettere maiuscola
-
 	nuoveStringhe.push(formatted)
-}
+})
+
+// lo possiamo fare direttamente con il metodo map
+// const nuoveStringhe = strings.map(capitalize)
+
+// for (let i = 0; i < strings.length; i++) {
+// 	const stringa = strings[i]
+
+// 	const formatted = capitalize(stringa)
+// 	// console.log(formattedString, stringa)
+// 	// rimettere la prima lettere maiuscola
+
+// 	nuoveStringhe.push(formatted)
+// }
 
 console.log(nuoveStringhe)
 
@@ -251,22 +272,28 @@ const animals = [
 // console.log(animals)
 
 const mammals = []
-const canidi = []
+// const canidi = []
 
-for (let i = 0; i < animals.length; i++) {
-	const currentAnimal = animals[i]
-	// console.log(i, currentAnimal.nome, currentAnimal.classe)
-
-	if (currentAnimal.classe === 'mammiferi') {
-		mammals.push(currentAnimal)
+animals.forEach(function (animal) {
+	if (animal.classe === 'mammiferi') {
+		mammals.push(animal)
 	}
+})
 
-	if (currentAnimal.famiglia === 'canidi') {
-		canidi.push(currentAnimal)
-	}
-}
+// for (let i = 0; i < animals.length; i++) {
+// 	const currentAnimal = animals[i]
+// 	// console.log(i, currentAnimal.nome, currentAnimal.classe)
 
-// console.log(mammals, canidi)
+// 	if (currentAnimal.classe === 'mammiferi') {
+// 		mammals.push(currentAnimal)
+// 	}
+
+// 	// if (currentAnimal.famiglia === 'canidi') {
+// 	// 	canidi.push(currentAnimal)
+// 	// }
+// }
+
+console.log(mammals)
 
 /**
  * SNACK 4
@@ -313,14 +340,20 @@ const people = [
 // console.log(people)
 const messages = []
 
-for (let i = 0; i < people.length; i++) {
-	const currentPerson = people[i]
-	let mess = getMessage(currentPerson) // string: value of message
+people.forEach(function (currentPerson) {
+	let mess = getMessage(currentPerson)
 	messages.push(mess)
-}
+})
 
-// const log = console.log(messages)
-// console.log(log)
+// const messages = people.map(getMessage)
+
+// for (let i = 0; i < people.length; i++) {
+// 	const currentPerson = people[i]
+// 	let mess = getMessage(currentPerson) // string: value of message
+// 	messages.push(mess)
+// }
+
+console.log(messages)
 
 function getMessage(person) {
 	const nome = person.nome
